@@ -1,0 +1,441 @@
+/* =========================
+   Sundar Pichai Portfolio
+   Save this file as style.css
+   ========================= */
+
+:root {
+  --primary: #1a73e8;
+  --primary-dark: #1558b0;
+  --text: #202124;
+  --muted: #5f6368;
+  --background: #ffffff;
+  --surface: #f5f8fc;
+  --border: #dadce0;
+  --shadow: 0 8px 24px rgba(32, 33, 36, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--background);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+/* Header and navigation */
+header {
+  color: #fff;
+  background: linear-gradient(135deg, #174ea6, #1a73e8);
+  padding: 2.5rem 1.25rem 0;
+}
+
+.header-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.2;
+}
+
+.designation {
+  margin: 0.5rem 0 0;
+  font-size: 1.1rem;
+  color: #e8f0fe;
+}
+
+nav {
+  margin: 0 -1.25rem;
+  background: rgba(0, 0, 0, 0.13);
+}
+
+.nav-list {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.nav-list a {
+  display: block;
+  padding: 0.45rem 0.8rem;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.nav-list a:hover,
+.nav-list a:focus-visible {
+  background: rgba(255, 255, 255, 0.18);
+  text-decoration: none;
+}
+
+/* Main content sections */
+main {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 2rem auto;
+}
+
+.section {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  margin: 0 0 1.5rem;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.section.alt {
+  background: var(--surface);
+}
+
+.section h2 {
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.6rem;
+  color: #174ea6;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  border-bottom: 2px solid #d2e3fc;
+}
+
+.section p {
+  margin: 0 0 1rem;
+}
+
+.section p:last-child {
+  margin-bottom: 0;
+}
+
+/* Education table */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+th,
+td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+  border: 1px solid var(--border);
+}
+
+th {
+  color: #fff;
+  background: #1a73e8;
+  font-weight: 700;
+}
+
+tbody tr:nth-child(even) {
+  background: #f8fafd;
+}
+
+tbody tr:hover {
+  background: #e8f0fe;
+}
+
+/* Contributions cards */
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  padding: 1.25rem;
+  background: #fff;
+  border: 1px solid #e4e7eb;
+  border-top: 4px solid var(--primary);
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(32, 33, 36, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  margin: 0 0 0.5rem;
+  color: #174ea6;
+  font-size: 1.15rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Awards */
+.award-list {
+  margin: 0;
+  padding-left: 1.4rem;
+}
+
+.award-list li {
+  padding: 0.35rem 0 0.35rem 0.25rem;
+}
+
+.award-list li::marker {
+  color: var(--primary);
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.gallery figure {
+  overflow: hidden;
+  margin: 0;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(32, 33, 36, 0.07);
+}
+
+.gallery img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.gallery figure:hover img {
+  transform: scale(1.04);
+}
+
+.gallery figcaption {
+  padding: 0.75rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Contact */
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.contact-info h3 {
+  margin-top: 0;
+  color: #174ea6;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-form label {
+  margin-top: 0.35rem;
+  font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem 0.9rem;
+  font: inherit;
+  color: var(--text);
+  background: #fff;
+  border: 1px solid #bdc1c6;
+  border-radius: 7px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.15);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  align-self: flex-start;
+  margin-top: 0.75rem;
+  padding: 0.8rem 1.2rem;
+  font: inherit;
+  font-weight: 700;
+  color: #fff;
+  background: var(--primary);
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.contact-form button:focus-visible {
+  outline: 3px solid #a8c7fa;
+  outline-offset: 3px;
+}
+
+/* Footer */
+footer {
+  padding: 1.75rem 1rem;
+  color: #e8eaed;
+  background: #202124;
+  text-align: center;
+}
+
+footer p {
+  margin: 0.35rem 0;
+}
+
+footer a {
+  color: #8ab4f8;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* Responsive layout */
+@media (max-width: 800px) {
+  .card-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-wrap {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 520px) {
+  header {
+    padding-top: 1.75rem;
+  }
+
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .profile-photo {
+    width: 115px;
+    height: 115px;
+  }
+
+  .nav-list {
+    gap: 0.15rem;
+  }
+
+  .nav-list a {
+    padding: 0.4rem 0.55rem;
+    font-size: 0.9rem;
+  }
+
+  main {
+    width: min(100% - 1rem, 1100px);
+    margin: 1rem auto;
+  }
+
+  .section {
+    padding: 1.25rem;
+    border-radius: 10px;
+  }
+
+  .card-list,
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery img {
+    height: 220px;
+  }
+
+  th,
+  td {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
